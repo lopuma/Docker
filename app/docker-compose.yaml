@@ -1,0 +1,14 @@
+version: '3.2'
+
+services:
+  mypython_tk:
+    container_name: tsp_python_
+    build:
+      context: .
+      dockerfile: /home/lopuma/app/Dockerfile
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ~/app/:/app/
+    environment:
+      DISPLAY: $DISPLAY
+
