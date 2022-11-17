@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  nginx-proxy:
+    image: nginx
+    container_name: nginx-revers
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./app1:/etc/nginx/
+      - ./app2:/etc/nginx/

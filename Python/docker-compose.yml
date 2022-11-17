@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  python-ubuntu:
+    build: .
+    container_name: ubuntu-python
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+    environment:
+        - USER=${USER}
+    volumes:
+        - ./shared-scripts:/home/${USER}/scripts
